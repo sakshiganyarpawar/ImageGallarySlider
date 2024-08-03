@@ -3,9 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Gallary Slider</title>
+    <title>Image Gallery Slider</title>
+    <style>
+        .h1{
+            margin-top: 30px;
+            margin-left: 620px;
+            font-size: 40px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: blueviolet;
+        }
+        .gallery-img{
+            height: 500px;
+            width: 800px;
+            object-fit:cover;
+            display: block;
+            margin: 30px auto;
+        }
+        .btn-container{
+            width: fit-content;
+            position: relative;
+            display: block;
+            margin: 20px auto ;
+        }
+        .btn{
+            height: 80px;
+            margin: 2px;
+            cursor: pointer;
+            position: absolute;
+           
+        }
+        .btn-prev{
+            left: -40px;
+            top:210px;
+        }
+        .btn-next{
+            right: -40px;
+            top:210px ;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1 class="h1">Birds Gallery</h1>
+   <div class="btn-container">
+    <img src="./birds/1.jpeg" class="gallery-img" id="bird"/> 
+   <img src="left-chevron.png" type="btn" class="btn btn-prev" onclick="prev()"/>
+   <img src="right-chevron.png" type="btn" class="btn btn-next" onclick="next()"/>
+</div>
+<script src="./birds.js"></script>
 </body>
 </html>
